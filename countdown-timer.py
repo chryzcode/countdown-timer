@@ -16,5 +16,9 @@ def countdown(t):
         t -= 1
     print('Time up')
 
-t = input('Enter the time in seconds: ')
-countdown(int(t))
+try:
+    t = int(input('Enter the time in seconds: '))
+    countdown(int(t))
+except ValueError:
+    print('Please enter a valid number')
+    quit()
